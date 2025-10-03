@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "/home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen",
+	"CMAKE_BINARY_DIR" : "/home/Davanico/project/linux-cleanup/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/Davanico/project/linux-cleanup/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/Davanico/project/linux-cleanup",
+	"CMAKE_SOURCE_DIR" : "/home/Davanico/project/linux-cleanup",
+	"INCLUDE_DIR" : "/home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen/include",
+	"INPUTS" : [ "/home/Davanico/project/linux-cleanup/images/logo.svg" ],
+	"LOCK_FILE" : "/home/Davanico/project/linux-cleanup/build/CMakeFiles/mx-cleanup_autogen.dir/AutoRcc_images_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "images" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_images.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt6/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/Davanico/project/linux-cleanup/build/CMakeFiles/mx-cleanup_autogen.dir/AutoRcc_images_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/Davanico/project/linux-cleanup/images.qrc",
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/Davanico/project/linux-cleanup/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DVERSION=\\\"25.7\\\" -I/home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -Wpedantic -pedantic -Werror=return-type -Werror=switch -Werror=uninitialized -Werror -Werror=return-local-addr -fPIC -std=gnu++20 -o CMakeFiles/mx-cleanup.dir/mx-cleanup_autogen/mocs_compilation.cpp.o -c /home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen/mocs_compilation.cpp",
+  "file": "/home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/home/Davanico/project/linux-cleanup/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DVERSION=\\\"25.7\\\" -I/home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -Wpedantic -pedantic -Werror=return-type -Werror=switch -Werror=uninitialized -Werror -Werror=return-local-addr -fPIC -std=gnu++20 -o CMakeFiles/mx-cleanup.dir/main.cpp.o -c /home/Davanico/project/linux-cleanup/main.cpp",
+  "file": "/home/Davanico/project/linux-cleanup/main.cpp"
+},
+{
+  "directory": "/home/Davanico/project/linux-cleanup/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DVERSION=\\\"25.7\\\" -I/home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -Wpedantic -pedantic -Werror=return-type -Werror=switch -Werror=uninitialized -Werror -Werror=return-local-addr -fPIC -std=gnu++20 -o CMakeFiles/mx-cleanup.dir/mainwindow.cpp.o -c /home/Davanico/project/linux-cleanup/mainwindow.cpp",
+  "file": "/home/Davanico/project/linux-cleanup/mainwindow.cpp"
+},
+{
+  "directory": "/home/Davanico/project/linux-cleanup/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DVERSION=\\\"25.7\\\" -I/home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -Wpedantic -pedantic -Werror=return-type -Werror=switch -Werror=uninitialized -Werror -Werror=return-local-addr -fPIC -std=gnu++20 -o CMakeFiles/mx-cleanup.dir/about.cpp.o -c /home/Davanico/project/linux-cleanup/about.cpp",
+  "file": "/home/Davanico/project/linux-cleanup/about.cpp"
+},
+{
+  "directory": "/home/Davanico/project/linux-cleanup/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DVERSION=\\\"25.7\\\" -I/home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -Wpedantic -pedantic -Werror=return-type -Werror=switch -Werror=uninitialized -Werror -Werror=return-local-addr -fPIC -std=gnu++20 -o CMakeFiles/mx-cleanup.dir/mx-cleanup_autogen/EWIEGA46WW/qrc_images.cpp.o -c /home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen/EWIEGA46WW/qrc_images.cpp",
+  "file": "/home/Davanico/project/linux-cleanup/build/mx-cleanup_autogen/EWIEGA46WW/qrc_images.cpp"
+}
+]

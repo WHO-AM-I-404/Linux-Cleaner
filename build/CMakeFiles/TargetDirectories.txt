@@ -1,0 +1,12 @@
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/mx-cleanup.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/mx-cleanup_lupdate.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/update_translations.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/mx-cleanup_lrelease.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/release_translations.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/edit_cache.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/rebuild_cache.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/list_install_components.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/install.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/install/local.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/install/strip.dir
+/home/Davanico/project/linux-cleanup/build/CMakeFiles/mx-cleanup_autogen.dir
