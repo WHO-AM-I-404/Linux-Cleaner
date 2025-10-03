@@ -167,11 +167,11 @@ qt6_add_translations(mx-cleanup
 
 
 
-# Set target properties
 set_target_properties(mx-cleanup PROPERTIES
     OUTPUT_NAME "mx-cleanup"
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}
 )
+
 
 
 
