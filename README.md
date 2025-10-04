@@ -16,11 +16,6 @@
 </div>
 
 ---
-<p align="center">
-  <img src="images/logo.svg" width="120" alt="Linux Cleaner Logo">
-</p>
-
----
 
 ## 📋 Description
 
