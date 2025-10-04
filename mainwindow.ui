@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MX Cleanup</string>
+   <string>Linux Cleaner</string>
   </property>
   <layout class="QVBoxLayout">
    <item>
@@ -21,7 +21,7 @@
      </property>
      <widget class="QWidget" name="tabMain">
       <attribute name="title">
-       <string>Main</string>
+       <string>Cleanup</string>
       </attribute>
       <layout class="QGridLayout" name="mainTabLayout">
        <item row="6" column="1">
@@ -580,7 +580,7 @@
           <item>
            <widget class="QPushButton" name="pushRemoveManuals">
             <property name="text">
-             <string>Remove MX manuals for languages other than system default</string>
+             <string>Remove system manuals for languages other than default</string>
             </property>
             <property name="icon">
              <iconset theme="text-x-generic"/>

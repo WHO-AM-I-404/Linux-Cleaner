@@ -1,23 +1,20 @@
 # **********************************************************************
-# * Copyright (C) 2018-2025 MX Authors
+# * Copyright (C) 2025 WHO-AM-I-404
 # *
-# * Authors: Adrian
-# *          MX Linux <http://mxlinux.org>
+# * This file is part of Linux Cleaner.
 # *
-# * This file is part of mx-cleanup.
-# *
-# * mx-cleanup is free software: you can redistribute it and/or modify
+# * Linux Cleaner is free software: you can redistribute it and/or modify
 # * it under the terms of the GNU General Public License as published by
 # * the Free Software Foundation, either version 3 of the License, or
 # * (at your option) any later version.
 # *
-# * mx-cleanup is distributed in the hope that it will be useful,
+# * Linux Cleaner is distributed in the hope that it will be useful,
 # * but WITHOUT ANY WARRANTY; without even the implied warranty of
 # * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # * GNU General Public License for more details.
 # *
 # * You should have received a copy of the GNU General Public License
-# * along with mx-cleanup.  If not, see <http://www.gnu.org/licenses/>.
+# * along with Linux Cleaner.  If not, see <http://www.gnu.org/licenses/>.
 # **********************************************************************/
 
 cmake_minimum_required(VERSION 3.16)
@@ -35,9 +32,9 @@ if(NOT DPKG_RESULT EQUAL 0)
     message(FATAL_ERROR "Failed to get version from debian/changelog using dpkg-parsechangelog")
 endif()
 
-project(mx-cleanup
+project(linux-cleaner
     VERSION ${PROJECT_VERSION_FROM_CHANGELOG}
-    DESCRIPTION "MX Cleanup - GUI for system cleanup and maintenance"
+    DESCRIPTION "Linux Cleaner - Modern GUI for system cleanup and maintenance"
     LANGUAGES CXX
 )
 
@@ -105,7 +102,7 @@ set(RESOURCE_FILES
 file(GLOB TRANSLATION_FILES "translations/*.ts")
 
 # Create the executable
-add_executable(mx-cleanup
+add_executable(linux-cleaner
     ${SOURCES}
     ${HEADERS}
     ${UI_FILES}
@@ -113,14 +110,14 @@ add_executable(mx-cleanup
 )
 
 # Link Qt6 libraries
-target_link_libraries(mx-cleanup
+target_link_libraries(linux-cleaner
     Qt6::Core
     Qt6::Gui
     Qt6::Widgets
 )
 
 # Set compiler flags
-target_compile_options(mx-cleanup PRIVATE
+target_compile_options(linux-cleaner PRIVATE
     -Wpedantic
     -pedantic
     -Werror=return-type
@@ -131,13 +128,13 @@ target_compile_options(mx-cleanup PRIVATE
 
 # Add compiler-specific flags
 if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR USE_CLANG)
-    target_compile_options(mx-cleanup PRIVATE -Werror=return-stack-address)
+    target_compile_options(linux-cleaner PRIVATE -Werror=return-stack-address)
 else()
-    target_compile_options(mx-cleanup PRIVATE -Werror=return-local-addr)
+    target_compile_options(linux-cleaner PRIVATE -Werror=return-local-addr)
 endif()
 
 # Set compile definitions
-target_compile_definitions(mx-cleanup PRIVATE
+target_compile_definitions(linux-cleaner PRIVATE
     QT_DEPRECATED_WARNINGS
     QT_DISABLE_DEPRECATED_BEFORE=0x060000
     VERSION="${PROJECT_VERSION}"
@@ -145,21 +142,21 @@ target_compile_definitions(mx-cleanup PRIVATE
 
 # Release-specific optimizations
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
-    target_compile_definitions(mx-cleanup PRIVATE NDEBUG)
-    target_compile_options(mx-cleanup PRIVATE -O3)
+    target_compile_definitions(linux-cleaner PRIVATE NDEBUG)
+    target_compile_options(linux-cleaner PRIVATE -O3)
 
     # Add LTO - different flags for different compilers
     if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR USE_CLANG)
-        target_compile_options(mx-cleanup PRIVATE -flto=thin)
-        target_link_options(mx-cleanup PRIVATE -flto=thin)
+        target_compile_options(linux-cleaner PRIVATE -flto=thin)
+        target_link_options(linux-cleaner PRIVATE -flto=thin)
     else()
-        target_compile_options(mx-cleanup PRIVATE -flto=auto)
-        target_link_options(mx-cleanup PRIVATE -flto=auto)
+        target_compile_options(linux-cleaner PRIVATE -flto=auto)
+        target_link_options(linux-cleaner PRIVATE -flto=auto)
     endif()
 endif()
 
 # Handle translations
-qt6_add_translations(mx-cleanup
+qt6_add_translations(linux-cleaner
     TS_FILES ${TRANSLATION_FILES}
     LRELEASE_OPTIONS -compress -nounfinished -removeidentical -silent
     QM_FILES_OUTPUT_VARIABLE qm_files
@@ -167,8 +164,8 @@ qt6_add_translations(mx-cleanup
 
 
 
-set_target_properties(mx-cleanup PROPERTIES
-    OUTPUT_NAME "mx-cleanup"
+set_target_properties(linux-cleaner PROPERTIES
+    OUTPUT_NAME "linux-cleaner"
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}
 )
 
@@ -177,6 +174,6 @@ set_target_properties(mx-cleanup PROPERTIES
 
 # Install target (required by Debian build system)
 # Other files are handled by debian/install
-install(TARGETS mx-cleanup
+install(TARGETS linux-cleaner
     RUNTIME DESTINATION bin
 )

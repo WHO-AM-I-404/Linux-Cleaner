@@ -1,10 +1,9 @@
 /**********************************************************************
  *  main.cpp
  **********************************************************************
- * Copyright (C) 2018-2025 MX Authors
+ * Copyright (C) 2025 WHO-AM-I-404
  *
- * Authors: Adrian
- *          MX Linux <http://mxlinux.org>
+ * This file is part of Linux Cleaner.
  *
  * This is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -57,7 +56,7 @@ int main(int argc, char *argv[])
     }
 
     QApplication::setApplicationVersion(VERSION);
-    QApplication::setOrganizationName("MX-Linux");
+    QApplication::setOrganizationName("WHO-AM-I-404");
 
     QCommandLineParser parser;
     parser.setApplicationDescription(QObject::tr("Quick safe removal of old files"));

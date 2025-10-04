@@ -1,10 +1,9 @@
 /**********************************************************************
  *  mainwindow.cpp
  **********************************************************************
- * Copyright (C) 2018-2025 MX Authors
+ * Copyright (C) 2025 WHO-AM-I-404
  *
- * Authors: Adrian
- *          MX Linux <http://mxlinux.org>
+ * This file is part of Linux Cleaner.
  *
  * This is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -61,9 +60,9 @@ void MainWindow::removeManuals()
         return;
     }
 
-    QString exclusionPattern = QString("(mx|mxfb)-(docs|faq)-(en|common%1)")
+    QString exclusionPattern = QString(".*-(docs|faq|man)-(en|common%1)")
                                    .arg(lang == "en" || lang == "C" ? "" : QString("|%1").arg(lang));
-    QString listCmd = QString("dpkg-query -W -f='${Package}\n' -- 'mx-docs-*' 'mxfb-docs-*' 'mx-faq-*' 'mxfb-faq-*' "
+    QString listCmd = QString("dpkg-query -W -f='${Package}\n' -- '*-docs-*' '*-faq-*' '*-man-*' "
                               "2>/dev/null | grep -vE '%1'")
                           .arg(exclusionPattern);
 
@@ -119,7 +118,7 @@ void MainWindow::addGroupCheckbox(QLayout *layout, const QStringList &packages, 
 // Setup various items for the first run of the program
 void MainWindow::setup()
 {
-    setWindowTitle(tr("MX Cleanup"));
+    setWindowTitle(tr("Linux Cleaner"));
     ui->tabWidget->setCurrentIndex(0);
     adjustSize();
 
@@ -143,8 +142,8 @@ void MainWindow::setup()
 // Check if the cleanup script exists in the cron directories
 void MainWindow::loadSchedule()
 {
-    const QStringList cronPaths = {"/etc/cron.daily/mx-cleanup", "/etc/cron.weekly/mx-cleanup",
-                                   "/etc/cron.monthly/mx-cleanup", "/etc/cron.d/mx-cleanup"};
+    const QStringList cronPaths = {"/etc/cron.daily/linux-cleaner", "/etc/cron.weekly/linux-cleaner",
+                                   "/etc/cron.monthly/linux-cleaner", "/etc/cron.d/linux-cleaner"};
 
     if (QFile::exists(cronPaths.at(0))) {
         ui->radioDaily->setChecked(true);
@@ -273,7 +272,7 @@ void MainWindow::removeKernelPackages(const QStringList &list)
 void MainWindow::loadOptions()
 {
     QString period;
-    QString file_name = "/usr/bin/mx-cleanup-script";
+    QString file_name = "/usr/bin/linux-cleaner-script";
     if (ui->radioDaily->isChecked()) {
         period = "daily";
     } else if (ui->radioWeekly->isChecked()) {
@@ -288,7 +287,7 @@ void MainWindow::loadOptions()
     }
 
     if (period != "reboot") {
-        file_name = "/etc/cron." + period + "/mx-cleanup";
+        file_name = "/etc/cron." + period + "/linux-cleaner";
     }
 
     // Folders
@@ -384,16 +383,16 @@ void MainWindow::loadOptions()
     ui->spinBoxTrash->setValue(ctime.toInt());
 }
 
-// Save cleanup commands to a /etc/cron.daily|weekly|monthly/mx-cleanup script
+// Save cleanup commands to a /etc/cron.daily|weekly|monthly/linux-cleaner script
 void MainWindow::saveSchedule(const QString &cmd_str, const QString &period)
 {
-    QString fileName = (period == "@reboot") ? "/usr/bin/mx-cleanup-script" : "/etc/cron." + period + "/mx-cleanup";
+    QString fileName = (period == "@reboot") ? "/usr/bin/linux-cleaner-script" : "/etc/cron." + period + "/linux-cleaner";
 
     if (period == "@reboot") {
-        QString cronFile {"/etc/cron.d/mx-cleanup"};
+        QString cronFile {"/etc/cron.d/linux-cleaner"};
         QTemporaryFile tempCron;
         tempCron.open();
-        tempCron.write("@reboot root /usr/bin/mx-cleanup-script\n");
+        tempCron.write("@reboot root /usr/bin/linux-cleaner-script\n");
         tempCron.close();
         cmdOutAsRoot("mv " + tempCron.fileName() + ' ' + cronFile);
         cmdOutAsRoot("chown root: " + cronFile);
@@ -405,7 +404,7 @@ void MainWindow::saveSchedule(const QString &cmd_str, const QString &period)
     QTextStream out(&tempFile);
     out << "#!/bin/sh\n";
     out << "#\n";
-    out << "# This file was created by MX Cleanup\n";
+    out << "# This file was created by Linux Cleaner\n";
     out << "#\n\n";
     out << cmd_str;
     tempFile.close();
@@ -624,10 +623,10 @@ void MainWindow::pushApply_clicked()
     }
 
     // Cleanup schedule
-    cmdOutAsRoot("rm /etc/cron.daily/mx-cleanup", true);
-    cmdOutAsRoot("rm /etc/cron.weekly/mx-cleanup", true);
-    cmdOutAsRoot("rm /etc/cron.monthly/mx-cleanup", true);
-    cmdOutAsRoot("rm /etc/cron.d/mx-cleanup", true);
+    cmdOutAsRoot("rm /etc/cron.daily/linux-cleaner", true);
+    cmdOutAsRoot("rm /etc/cron.weekly/linux-cleaner", true);
+    cmdOutAsRoot("rm /etc/cron.monthly/linux-cleaner", true);
+    cmdOutAsRoot("rm /etc/cron.d/linux-cleaner", true);
 
     // Add schedule file
     if (!ui->radioNone->isChecked()) {
@@ -679,19 +678,19 @@ void MainWindow::pushAbout_clicked()
 {
     this->hide();
     displayAboutMsgBox(
-        tr("About") + tr("MX Cleanup"),
-        R"(<p align="center"><b><h2>MX Cleanup</h2></b></p><p align="center">)" + tr("Version: ")
+        tr("About") + " " + tr("Linux Cleaner"),
+        R"(<p align="center"><b><h2>Linux Cleaner</h2></b></p><p align="center">)" + tr("Version: ")
             + QApplication::applicationVersion() + "</p><p align=\"center\"><h3>"
-            + tr("Quick and safe removal of old files")
-            + R"(</h3></p><p align="center"><a href="http://mxlinux.org">http://mxlinux.org</a><br /></p><p align="center">)"
-            + tr("Copyright (c) MX Linux") + "<br /><br /></p>",
-        "/usr/share/doc/mx-cleanup/license.html", tr("%1 License").arg(this->windowTitle()));
+            + tr("Modern GUI for system cleanup and maintenance")
+            + R"(</h3></p><p align="center"><a href="https://github.com/WHO-AM-I-404/linux-cleaner">https://github.com/WHO-AM-I-404/linux-cleaner</a><br /></p><p align="center">)"
+            + tr("Copyright (c) 2025 WHO-AM-I-404") + "<br /><br /></p>",
+        "/usr/share/doc/linux-cleaner/license.html", tr("%1 License").arg(this->windowTitle()));
     this->show();
 }
 
 void MainWindow::pushHelp_clicked()
 {
-    const QString url {"/usr/share/doc/mx-cleanup/mx-cleanup.html"};
+    const QString url {"/usr/share/doc/linux-cleaner/linux-cleaner.html"};
     displayDoc(url, tr("%1 Help").arg(this->windowTitle()));
 }
 

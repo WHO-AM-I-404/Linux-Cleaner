@@ -1,25 +1,22 @@
 #!/bin/bash
 
 # **********************************************************************
-# * Copyright (C) 2018 MX Authors
+# * Copyright (C) 2025 WHO-AM-I-404
 # *
-# * Authors: Adrian
-# *          MX Linux <http://mxlinux.org>
+# * This file is part of Linux Cleaner.
 # *
-# * This file is part of mx-cleanup.
-# *
-# * mx-cleanup is free software: you can redistribute it and/or modify
+# * Linux Cleaner is free software: you can redistribute it and/or modify
 # * it under the terms of the GNU General Public License as published by
 # * the Free Software Foundation, either version 3 of the License, or
 # * (at your option) any later version.
 # *
-# * mx-cleanup is distributed in the hope that it will be useful,
+# * Linux Cleaner is distributed in the hope that it will be useful,
 # * but WITHOUT ANY WARRANTY; without even the implied warranty of
 # * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # * GNU General Public License for more details.
 # *
 # * You should have received a copy of the GNU General Public License
-# * along with mx-cleanup.  If not, see <http://www.gnu.org/licenses/>.
+# * along with Linux Cleaner.  If not, see <http://www.gnu.org/licenses/>.
 # **********************************************************************/
 
 set -e
@@ -127,4 +124,4 @@ echo "Building project with Ninja..."
 cmake --build "$BUILD_DIR" --parallel
 
 echo "Build completed successfully!"
-echo "Executable: $BUILD_DIR/mx-cleanup"
+echo "Executable: $BUILD_DIR/linux-cleaner"

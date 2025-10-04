@@ -1,10 +1,9 @@
 /**********************************************************************
  *
  **********************************************************************
- * Copyright (C) 2023-2025 MX Authors
+ * Copyright (C) 2025 WHO-AM-I-404
  *
- * Authors: Adrian <adrian@mxlinux.org>
- *          MX Linux <http://mxlinux.org>
+ * This file is part of Linux Cleaner.
  *
  * This is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

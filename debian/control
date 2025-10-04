@@ -1,21 +1,24 @@
-Source: mx-cleanup
+Source: linux-cleaner
 Section: admin
 Priority: optional
-Maintainer: Adrian <adrian@mxlinux.org>
+Maintainer: WHO-AM-I-404 <who-am-i-404@example.com>
 Build-Depends: debhelper-compat (= 12), cmake (>= 3.16), ninja-build, qt6-base-dev, qt6-base-dev-tools, qt6-tools-dev, qt6-tools-dev-tools
 Standards-Version: 3.9.8
-Homepage: https://github.com/mxlinux/mx-cleanup
-Vcs-Git: https://github.com/mxlinux/mx-cleanup.git
-Vcs-Browser: https://github.com/mxlinux/mx-cleanup
+Homepage: https://github.com/WHO-AM-I-404/linux-cleaner
+Vcs-Git: https://github.com/WHO-AM-I-404/linux-cleaner.git
+Vcs-Browser: https://github.com/WHO-AM-I-404/linux-cleaner
 
-Package: mx-cleanup
+Package: linux-cleaner
 Architecture: any
 Depends: baobab | qdirstat | filelight,
-         xdg-utils | mx-viewer,
+         xdg-utils,
          ${misc:Depends},
          ${shlibs:Depends}
-Description: GUI for system cleanup and maintenance
- A user-friendly graphical interface that allows users to:
+Description: Modern GUI for system cleanup and maintenance
+ Linux Cleaner is a user-friendly graphical interface that allows users to:
   * Safely remove old and unnecessary files
-  * Free up disk space by cleaning temporary files
+  * Free up disk space by cleaning temporary files, cache, and logs
+  * Manage system packages and remove unused components
+  * Schedule automated cleanup tasks
+  * Analyze disk usage with integrated tools
  .
