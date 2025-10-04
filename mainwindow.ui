@@ -608,7 +608,8 @@
              <string>Remove unused WiFi drivers</string>
             </property>
             <property name="icon">
-             <iconset theme="list-remove"/>
+             <iconset theme="list-remove">
+              <normaloff>.</normaloff>.</iconset>
             </property>
             <property name="autoDefault">
              <bool>false</bool>
@@ -627,7 +628,8 @@
              <string>List and select kernels to remove</string>
             </property>
             <property name="icon">
-             <iconset theme="view-list"/>
+             <iconset theme="view-list">
+              <normaloff>.</normaloff>.</iconset>
             </property>
             <property name="autoDefault">
              <bool>false</bool>
@@ -640,7 +642,8 @@
              <string>Remove system manuals for languages other than default</string>
             </property>
             <property name="icon">
-             <iconset theme="text-x-generic"/>
+             <iconset theme="text-x-generic">
+              <normaloff>.</normaloff>.</iconset>
             </property>
             <property name="autoDefault">
              <bool>false</bool>
@@ -674,7 +677,8 @@
              <string>Run Disk Usage Analyzer</string>
             </property>
             <property name="icon">
-             <iconset theme="baobab"/>
+             <iconset theme="baobab">
+              <normaloff>.</normaloff>.</iconset>
             </property>
             <property name="autoDefault">
              <bool>false</bool>
@@ -703,19 +707,6 @@
    </item>
    <item>
     <layout class="QHBoxLayout" name="buttonBar">
-     <item>
-      <spacer>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>0</width>
-         <height>0</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
      <item>
       <widget class="QLabel" name="labelLogo">
        <property name="maximumSize">
@@ -763,7 +754,8 @@
         <string>Apply</string>
        </property>
        <property name="icon">
-        <iconset theme="dialog-ok"/>
+        <iconset theme="dialog-ok">
+         <normaloff>.</normaloff>.</iconset>
        </property>
        <property name="shortcut">
         <string/>
@@ -791,7 +783,8 @@
         <string>Close</string>
        </property>
        <property name="icon">
-        <iconset theme="window-close"/>
+        <iconset theme="window-close">
+         <normaloff>.</normaloff>.</iconset>
        </property>
        <property name="shortcut">
         <string>Alt+N</string>
@@ -841,8 +834,8 @@
  </resources>
  <connections/>
  <buttongroups>
-  <buttongroup name="buttonGroupLogs"/>
   <buttongroup name="buttonGroupApt"/>
+  <buttongroup name="buttonGroupLogs"/>
   <buttongroup name="buttonGroupTrash"/>
  </buttongroups>
 </ui>
