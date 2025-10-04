@@ -7,7 +7,7 @@
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="122"/>
         <location filename="../mainwindow.cpp" line="682"/>
-        <source>MX Cleanup</source>
+        <source>Linux Cleaner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -52,7 +52,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="583"/>
-        <source>Remove MX manuals for languages other than system default</source>
+        <source>Remove system manuals for languages other than system default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -323,8 +323,8 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="687"/>
-        <source>Copyright (c) MX Linux</source>
-        <translation>Karapatan (c) MX Linux</translation>
+        <source>Copyright (c) Linux Cleaner</source>
+        <translation>Karapatan (c) Linux Cleaner</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="688"/>

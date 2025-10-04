@@ -6,7 +6,7 @@ set -e
 
 echo "========================================="
 echo " Linux Clean Up - Build Script"
-echo " Version 1.0.1"
+echo " Version 2.0.0"
 echo "========================================="
 echo ""
 

@@ -5,7 +5,7 @@ linux-cleaner (1.0.1) stable; urgency=medium
   * Removed license and help buttons from interface for cleaner UI
   * Completely redesigned modern GUI interface
   * Embedded build version (no external file dependencies)
-  * Complete rename from mx cleanup to linux clean up
+  * Complete rename to Linux Cleaner
   * Enhanced documentation for beginners
   * All copyright belongs to WHO-AM-I-404
 
@@ -14,7 +14,7 @@ linux-cleaner (1.0.1) stable; urgency=medium
 linux-cleaner (1.0.0) stable; urgency=medium
 
   * Initial release of Linux Cleaner
-  * Complete rebrand from mx-cleanup to Linux Cleaner
+  * Complete rebrand to Linux Cleaner
   * Modern and clean user interface design
   * Enhanced system cleanup functionality
   * Support for multiple cleanup operations:

@@ -7,8 +7,8 @@
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="122"/>
         <location filename="../mainwindow.cpp" line="682"/>
-        <source>MX Cleanup</source>
-        <translation>MX Καθαρισμός</translation>
+        <source>Linux Cleaner</source>
+        <translation>Linux Cleaner Καθαρισμός</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="683"/>
@@ -52,8 +52,8 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="583"/>
-        <source>Remove MX manuals for languages other than system default</source>
-        <translation>Αφαίρεση εγχειριδίων χρήσης του MX για διαφορετικές γλώσσες από τη προεπιλεγμένη</translation>
+        <source>Remove system manuals for languages other than system default</source>
+        <translation>Αφαίρεση εγχειριδίων χρήσης του Linux Cleaner για διαφορετικές γλώσσες από τη προεπιλεγμένη</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="661"/>
@@ -323,8 +323,8 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="687"/>
-        <source>Copyright (c) MX Linux</source>
-        <translation>Πνευματικά δικαιώματα (c) MX Linux</translation>
+        <source>Copyright (c) Linux Cleaner</source>
+        <translation>Πνευματικά δικαιώματα (c) Linux Cleaner</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="688"/>

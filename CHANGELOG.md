@@ -2,6 +2,51 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2025-10-04
+
+### 🎉 Major Release - Complete Rebranding & Enhancements
+
+#### 🔄 Complete Rebranding
+- ✅ **Complete rebrand to Linux Cleaner** - All legacy references removed
+- ✅ Deleted legacy `translations-desktop-file/` folder with old branding
+- ✅ Removed all legacy translation files (44 files)
+- ✅ Updated all documentation and references to Linux Cleaner
+- ✅ Fixed debian/changelog references
+
+#### 🌍 Universal Debian Compatibility
+- ✅ **Works on ALL Debian-based distributions** - No specific distro requirements
+- ✅ APT package manager integration (universal for Debian family)
+- ✅ Flatpak support (cross-distribution)
+- ✅ Desktop file standards compliance (FreeDesktop.org)
+- ✅ PolicyKit integration (pkexec) - works across all desktop environments
+- ✅ Support for all major desktop environments
+
+#### 📚 Complete Documentation Overhaul
+- ✅ **Comprehensive README.md** with detailed user guides
+- ✅ **Debug Guide** - How to troubleshoot errors, warnings, and issues
+- ✅ **Complete Build Instructions** - Multiple methods for all skill levels
+- ✅ **Installation Guide** - Step-by-step for all Debian distros
+- ✅ **Uninstallation Guide** - Clean removal instructions
+- ✅ **Usage Guide** - Detailed feature explanations
+- ✅ **Make/Build/Install/Uninstall** - Complete workflow documentation
+
+#### 🛠️ Technical Improvements
+- ✅ Version bumped to 2.0.0 (major release)
+- ✅ Cleaned legacy files and folders
+- ✅ Updated build scripts to version 2.0.0
+- ✅ Enhanced CMakeLists.txt configuration
+- ✅ Comprehensive error handling documentation
+
+#### 🐛 Debug & Troubleshooting
+- ✅ Added detailed debugging guide in documentation
+- ✅ LSP diagnostics support
+- ✅ Build error troubleshooting
+- ✅ Runtime error debugging
+- ✅ Dependency verification methods
+- ✅ Log file analysis guide
+
+---
+
 ## [1.0.1] - 2025-10-04
 
 ### 🎉 Major Changes
@@ -11,7 +56,7 @@ All notable changes to this project will be documented in this file.
 
 ### ✨ New Features
 - Embedded version in CMakeLists.txt (no external file dependencies)
-- Easy build script for beginners (`quick-build.sh`)
+- Easy build script for beginners (`build.sh`)
 - Complete and structured documentation
 
 ### 🎨 Design & UI
@@ -34,7 +79,7 @@ All notable changes to this project will be documented in this file.
 - CHANGELOG.md for version tracking
 
 ### 🔄 Rebranding
-- All "mx cleanup" references changed to "linux clean up"
+- All legacy references changed to "Linux Cleaner"
 - Copyright updated to WHO-AM-I-404 in all files
 
 ---
@@ -42,7 +87,7 @@ All notable changes to this project will be documented in this file.
 ## [1.0.0] - 2025-10-04
 
 ### 🚀 Initial Release
-Initial release of Linux Clean Up (rebranded from mx-cleanup)
+Initial release of Linux Cleaner
 
 ### Main Features
 - **APT Cache Cleanup**: Remove old or all package cache files

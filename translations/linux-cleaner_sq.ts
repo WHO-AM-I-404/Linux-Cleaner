@@ -7,8 +7,8 @@
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="122"/>
         <location filename="../mainwindow.cpp" line="682"/>
-        <source>MX Cleanup</source>
-        <translation>Pastrim MX</translation>
+        <source>Linux Cleaner</source>
+        <translation>Linux Cleaner</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="683"/>
@@ -52,8 +52,8 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="583"/>
-        <source>Remove MX manuals for languages other than system default</source>
-        <translation>Hiq doracakë MX për gjuhë të tjera nga ajo parazgjedhje e sistemit</translation>
+        <source>Remove system manuals for languages other than system default</source>
+        <translation>Hiq doracakë Linux Cleaner për gjuhë të tjera nga ajo parazgjedhje e sistemit</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="661"/>
@@ -323,8 +323,8 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="687"/>
-        <source>Copyright (c) MX Linux</source>
-        <translation>Të drejta kopjimi (c) MX Linux</translation>
+        <source>Copyright (c) Linux Cleaner</source>
+        <translation>Të drejta kopjimi (c) Linux Cleaner</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="688"/>
