@@ -19,22 +19,15 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-# Get version from debian/changelog
-execute_process(
-    COMMAND dpkg-parsechangelog -SVersion
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-    OUTPUT_VARIABLE PROJECT_VERSION_FROM_CHANGELOG
-    OUTPUT_STRIP_TRAILING_WHITESPACE
-    RESULT_VARIABLE DPKG_RESULT
-)
-
-if(NOT DPKG_RESULT EQUAL 0)
-    message(FATAL_ERROR "Failed to get version from debian/changelog using dpkg-parsechangelog")
-endif()
+# Embedded version - no external dependencies
+set(PROJECT_VERSION_MAJOR 1)
+set(PROJECT_VERSION_MINOR 0)
+set(PROJECT_VERSION_PATCH 1)
+set(PROJECT_VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}")
 
 project(linux-cleaner
-    VERSION ${PROJECT_VERSION_FROM_CHANGELOG}
-    DESCRIPTION "Linux Cleaner - Modern GUI for system cleanup and maintenance"
+    VERSION ${PROJECT_VERSION}
+    DESCRIPTION "Linux Clean Up - Modern GUI for system cleanup and maintenance"
     LANGUAGES CXX
 )
 
@@ -63,6 +56,9 @@ if(USE_CLANG)
     set(CMAKE_CXX_COMPILER_ID "Clang")
     message(STATUS "Using clang compiler")
 endif()
+
+# Set OpenGL preference for NixOS/Replit compatibility
+set(OpenGL_GL_PREFERENCE GLVND)
 
 # Find Qt6 components
 find_package(Qt6 REQUIRED COMPONENTS

@@ -1,25 +1,14 @@
 #!/bin/bash
-
-# **********************************************************************
-# * Copyright (C) 2025 WHO-AM-I-404
-# *
-# * This file is part of Linux Cleaner.
-# *
-# * Linux Cleaner is free software: you can redistribute it and/or modify
-# * it under the terms of the GNU General Public License as published by
-# * the Free Software Foundation, either version 3 of the License, or
-# * (at your option) any later version.
-# *
-# * Linux Cleaner is distributed in the hope that it will be useful,
-# * but WITHOUT ANY WARRANTY; without even the implied warranty of
-# * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# * GNU General Public License for more details.
-# *
-# * You should have received a copy of the GNU General Public License
-# * along with Linux Cleaner.  If not, see <http://www.gnu.org/licenses/>.
-# **********************************************************************/
+# Build Script for Linux Clean Up
+# Copyright (C) 2025 WHO-AM-I-404
 
 set -e
+
+echo "========================================="
+echo " Linux Clean Up - Build Script"
+echo " Version 1.0.1"
+echo "========================================="
+echo ""
 
 # Default values
 BUILD_DIR="build"
@@ -55,6 +44,12 @@ while [[ $# -gt 0 ]]; do
             echo "  --clean         Clean build directory before building"
             echo "  --debian        Build Debian package"
             echo "  -h, --help      Show this help message"
+            echo ""
+            echo "Examples:"
+            echo "  $0              # Quick build (recommended)"
+            echo "  $0 --clean      # Clean build"
+            echo "  $0 --debug      # Debug build"
+            echo "  $0 --debian     # Build Debian package"
             exit 0
             ;;
         *)
@@ -101,13 +96,15 @@ if [ "$CLEAN" = true ]; then
 fi
 
 # Create build directory
+echo "Creating build directory..."
 mkdir -p "$BUILD_DIR"
+cd "$BUILD_DIR"
 
-# Configure CMake with Ninja
-echo "Configuring CMake with Ninja generator..."
+# Configure CMake with Unix Makefiles
+echo ""
+echo "Configuring CMake with Unix Makefiles generator..."
 CMAKE_ARGS=(
-    -G Ninja
-    -B "$BUILD_DIR"
+    -G "Unix Makefiles"
     -DCMAKE_BUILD_TYPE="$BUILD_TYPE"
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 )
@@ -117,11 +114,23 @@ if [ "$USE_CLANG" = true ]; then
     echo "Using clang compiler"
 fi
 
-cmake "${CMAKE_ARGS[@]}"
+# Set OpenGL library path for NixOS/Replit compatibility (optional)
+CMAKE_PREFIX_PATH="/nix/store/7227amwg7k4sbl6mhglq17v5x5ki54ks-libglvnd-1.7.0:/nix/store/akn28bf4vh2q3p2czwkm37acmf33bvgd-libglvnd-1.7.0-dev:$CMAKE_PREFIX_PATH" \
+cmake "${CMAKE_ARGS[@]}" ..
 
 # Build the project
-echo "Building project with Ninja..."
-cmake --build "$BUILD_DIR" --parallel
+echo ""
+echo "Building Linux Clean Up..."
+echo "(Compiling with all CPU cores...)"
+make -j"$(nproc)"
 
-echo "Build completed successfully!"
-echo "Executable: $BUILD_DIR/linux-cleaner"
+cd ..
+
+echo ""
+echo "========================================="
+echo " ✓ Build completed successfully!"
+echo "========================================="
+echo ""
+echo "Executable location: ./linux-cleaner"
+echo "To run: ./linux-cleaner"
+echo ""

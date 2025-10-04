@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policyconfig>
+  <action id="com.linux-cleaner.run">
+    <description>Run Linux Clean Up as administrator</description>
+    <message>Authentication is required to run Linux Clean Up with administrative privileges</message>
+    <defaults>
+      <allow_active>auth_admin_keep</allow_active>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_any>no</allow_any>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/linux-cleaner</annotate>
+    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+  </action>
+</policyconfig>

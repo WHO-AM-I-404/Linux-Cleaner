@@ -460,10 +460,8 @@ void MainWindow::selectRadioButton(QGroupBox *groupbox, const QButtonGroup *grou
 
 void MainWindow::setConnections()
 {
-    connect(ui->pushAbout, &QPushButton::clicked, this, &MainWindow::pushAbout_clicked);
     connect(ui->pushApply, &QPushButton::clicked, this, &MainWindow::pushApply_clicked);
     connect(ui->pushCancel, &QPushButton::clicked, this, &MainWindow::close);
-    connect(ui->pushHelp, &QPushButton::clicked, this, &MainWindow::pushHelp_clicked);
     connect(ui->pushKernel, &QPushButton::clicked, this, &MainWindow::pushKernel_clicked);
     connect(ui->pushRemoveManuals, &QPushButton::clicked, this, &MainWindow::removeManuals);
     connect(ui->pushRTLremove, &QPushButton::clicked, this, &MainWindow::pushRTLremove_clicked);

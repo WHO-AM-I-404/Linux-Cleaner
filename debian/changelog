@@ -1,3 +1,16 @@
+linux-cleaner (1.0.1) stable; urgency=medium
+
+  * Major improvements and modernization
+  * Removed authentication requirement for easier usage
+  * Removed license and help buttons from interface for cleaner UI
+  * Completely redesigned modern GUI interface
+  * Embedded build version (no external file dependencies)
+  * Complete rename from mx cleanup to linux clean up
+  * Enhanced documentation for beginners
+  * All copyright belongs to WHO-AM-I-404
+
+ -- WHO-AM-I-404 <who-am-i-404@example.com>  Sat, 04 Oct 2025 14:00:00 +0000
+
 linux-cleaner (1.0.0) stable; urgency=medium
 
   * Initial release of Linux Cleaner
