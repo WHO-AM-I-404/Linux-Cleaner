@@ -16,6 +16,11 @@
 </div>
 
 ---
+<p align="center">
+  <img src="images/logo.svg" width="120" alt="Linux Cleaner Logo">
+</p>
+
+---
 
 ## 📋 Description
 
@@ -198,23 +203,27 @@ linux-cleaner
 ## 📁 Project Structure
 
 ```
-linux-cleaner/
-├── main.cpp              # Application entry point
-├── mainwindow.{cpp,h,ui} # Main window & UI
-├── about.{cpp,h}         # About dialog
-├── common.h              # Common utilities
-├── CMakeLists.txt        # Build configuration
-├── build.sh              # Build script
-├── install.sh            # System-wide install script
-├── uninstall.sh          # Uninstall script
-├── translations/         # Multi-language support
-├── images/               # Application icons & logo
-│   ├── logo.svg          # Scalable icon
-│   └── linux-cleaner.png # PNG icon
-├── help/                 # Documentation files
-├── debian/               # Debian packaging
-├── scripts/              # Helper scripts
-└── README.md            # This documentation
+Linux-Cleaner/
+├── README.md
+├── LICENSE
+├── CHANGELOG.md
+├── build.sh
+├── install.sh
+├── uninstall.sh
+├── Makefile
+├── com.linux-cleaner.policy
+├── linux-cleaner.desktop
+├── images/
+│   ├── logo.svg
+│   └── linux-cleaner.png
+├── src/
+│   ├── main.cpp
+│   ├── mainwindow.cpp
+│   ├── ...
+│   └── CMakeLists.txt
+└── translations/
+    ├── *.ts
+    └── *.qm
 ```
 
 ---

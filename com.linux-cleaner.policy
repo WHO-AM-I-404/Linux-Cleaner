@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+
 <policyconfig>
+  <vendor>Linux Cleaner</vendor>
+  <vendor_url>https://github.com/WHO-AM-I-404/Linux-Cleaner</vendor_url>
+
   <action id="com.linux-cleaner.run">
-    <description>Run Linux Clean Up as administrator</description>
-    <message>Authentication is required to run Linux Clean Up with administrative privileges</message>
+    <description>Run Linux Cleaner with administrative privileges</description>
+    <message>Authentication is required to clean system files</message>
     <defaults>
-      <allow_active>auth_admin_keep</allow_active>
-      <allow_inactive>auth_admin</allow_inactive>
       <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
     </defaults>
     <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/linux-cleaner</annotate>
     <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
